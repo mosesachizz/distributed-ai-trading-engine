@@ -1,0 +1,1 @@
+"""Streaming module for real-time market data handling with Kafka."""

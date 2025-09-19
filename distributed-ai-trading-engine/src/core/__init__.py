@@ -1,0 +1,1 @@
+"""Core module for the Distributed AI Trading Engine."""
