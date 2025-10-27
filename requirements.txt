@@ -1,10 +1,12 @@
-tensorflow==2.15.0
-kafka-python==2.0.2
-numpy==1.26.4
-fastapi==0.115.0
-uvicorn==0.30.6
-pyyaml==6.0.2
-pytest==8.3.3
-python-jose[cryptography]==3.3.0
-prometheus-client==0.20.0
-flake8==7.1.1
+# Core dependencies for Distributed AI Trading Engine
+tensorflow==2.15.0        # ML framework for LSTM model
+kafka-python==2.0.2       # Kafka client for real-time data streaming
+numpy==1.26.4             # Numerical computations
+pandas==2.2.2             # Data processing for market data
+fastapi==0.115.0          # API framework for trade endpoints
+uvicorn==0.30.6           # ASGI server for FastAPI
+pyyaml==6.0.2             # YAML parsing for configuration files
+python-jose[cryptography]==3.3.0  # JWT authentication
+prometheus-client==0.20.0 # Prometheus metrics for monitoring
+pytest==8.3.3             # Testing framework
+flake8==7.1.1             # Linting for CI/CD
