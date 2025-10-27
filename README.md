@@ -99,7 +99,7 @@ def execute_trade(self, market_data: Dict) -> Optional[Dict]:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/distributed-ai-trading-engine.git
+git clone https://github.com/mosesachizz/distributed-ai-trading-engine.git
 cd distributed-ai-trading-engine
 ```
 
@@ -156,4 +156,5 @@ The GitHub Actions workflow (`.github/workflows/ci.yml`) runs tests, linting, an
 
 ## License
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
 
