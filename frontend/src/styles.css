@@ -1,0 +1,268 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #b3b02b 0%, #143a19 40%, #040404 100%);
+  color: #f0f1d2;
+}
+
+.dashboard-shell {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+}
+
+.header p {
+  margin: 6px 0 0;
+  opacity: 0.9;
+}
+
+.pulse {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(120deg, #d7dd54, #6d8b22);
+  color: #0a1207;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(11, 19, 10, 0.95), rgba(3, 6, 3, 0.95));
+  border: 1px solid rgba(190, 200, 89, 0.24);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.32);
+}
+
+.kpi {
+  grid-column: span 2;
+}
+
+.kpi h4 {
+  margin: 0;
+  color: #bac772;
+  font-size: 0.8rem;
+}
+
+.kpi strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.15rem;
+}
+
+.chart {
+  grid-column: span 8;
+}
+
+.chart-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.chart-head h3,
+.orderbook h3,
+.execution h3,
+.tape h3 {
+  margin: 0;
+}
+
+.timeframe {
+  font-size: 0.8rem;
+  color: #b7bf7a;
+}
+
+.chart svg {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.4), rgba(28, 41, 14, 0.4));
+}
+
+.chart polyline {
+  fill: none;
+  stroke: #e9f66f;
+  stroke-width: 2.3;
+  transition: all 1s linear;
+  animation: pulse-glow 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(233, 246, 111, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 9px rgba(233, 246, 111, 0.95));
+  }
+}
+
+.orderbook {
+  grid-column: span 4;
+}
+
+.depth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.depth-grid h5 {
+  margin: 0 0 6px;
+  font-size: 0.84rem;
+  color: #b5c067;
+}
+
+.depth-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 0.85rem;
+}
+
+.buy {
+  color: #75e17f;
+}
+
+.sell {
+  color: #ff8f8f;
+}
+
+.execution {
+  grid-column: span 8;
+}
+
+.execution form {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+.execution input,
+.execution select,
+.execution button {
+  border-radius: 9px;
+  border: 1px solid rgba(190, 200, 89, 0.34);
+  padding: 9px;
+  background: rgba(0, 0, 0, 0.56);
+  color: #eff3ca;
+}
+
+.execution input[type="range"] {
+  padding: 0;
+}
+
+.execution button {
+  background: linear-gradient(120deg, #456e2d, #afbd49);
+  color: #0d1509;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.leverage {
+  margin-top: 9px;
+  color: #c4d072;
+}
+
+.result {
+  margin-top: 6px;
+  color: #e8f8a0;
+}
+
+.tape {
+  grid-column: span 4;
+}
+
+.ticker {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+.tape-item {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.8fr 0.6fr 0.8fr;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.82rem;
+}
+
+.muted {
+  color: #a3a88e;
+}
+
+.footer {
+  margin-top: 18px;
+  padding: 14px 8px;
+  text-align: center;
+  color: #d9deac;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer a {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #e9f66f;
+  font-weight: 600;
+}
+
+.footer svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 1080px) {
+  .kpi {
+    grid-column: span 4;
+  }
+
+  .chart,
+  .orderbook,
+  .execution,
+  .tape {
+    grid-column: span 12;
+  }
+
+  .execution form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
