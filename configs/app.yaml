@@ -1,0 +1,13 @@
+application:
+  name: distributed-ai-trading-engine
+  environment: development
+
+trading:
+  default_symbols: [AAPL, TSLA, NVDA, MSFT]
+  execution:
+    target_latency_ms: 50
+
+risk:
+  controls:
+    max_notional: 1000000
+    max_daily_loss: 50000

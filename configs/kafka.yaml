@@ -1,0 +1,7 @@
+kafka:
+  bootstrap_servers: kafka:9092
+  topics:
+    market_ticks: market-ticks
+    trade_orders: trade-orders
+  partitions: 6
+  replication_factor: 1
