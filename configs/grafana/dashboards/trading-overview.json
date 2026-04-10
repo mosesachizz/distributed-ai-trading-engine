@@ -1,0 +1,16 @@
+{
+  "title": "Trading Engine Overview",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Trade Latency P95",
+      "targets": [{ "expr": "histogram_quantile(0.95, rate(trade_latency_ms_bucket[1m]))" }]
+    },
+    {
+      "type": "stat",
+      "title": "Accepted Trades",
+      "targets": [{ "expr": "sum(trades_total{accepted=\"True\"})" }]
+    }
+  ]
+}
